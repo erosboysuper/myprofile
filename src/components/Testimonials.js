@@ -1,37 +1,49 @@
-import React, { Component } from 'react';
-export default class Testimonials extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
-    return (
-      <section id="testimonials">
-        <div className="text-container">
-          <div className="row">
-            <div className="two columns header-col">
-              <h1><span>Client Testimonials</span></h1>
+import React, { Component } from "react";
+const Testimonials = ({ resumeData }) => {
+  return (
+    <div className="container">
+      <form action="/action_page.php">
+        <div className="row">
+          <h2>Login with Social Media or Manually</h2>
+          <div className="vl">
+            <span className="vl-innertext">or</span>
+          </div>
+
+          <div className="col">
+            <a href="#" className="fb btn">
+              <i className="fa fa-facebook fa-fw"></i> Login with Facebook
+            </a>
+            <a href="#" className="twitter btn">
+              <i className="fa fa-twitter fa-fw"></i> Login with Twitter
+            </a>
+            <a href="#" className="google btn">
+              <i className="fa fa-google fa-fw"></i> Login with Google+
+            </a>
+            <input type="submit" value="SignUp" />
+          </div>
+
+          <div className="col">
+            <div className="hide-md-lg">
+              <p>Or sign in manually:</p>
             </div>
-            <div className="ten columns flex-container">
-              <div className="flexslider">
-                <ul className="slides">
-                  {
-                    resumeData.testimonials && resumeData.testimonials.map((item)=>{
-                      return(
-                        <li>
-                          <blockquote>
-                            <p>
-                            {item.description}
-                            </p>
-                            <cite>{item.name}</cite>
-                          </blockquote>
-                        </li>
-                      )
-                    })
-                  }
-                </ul>
-              </div> {/* div.flexslider ends */}
-            </div> {/* div.flex-container ends */}
-          </div> {/* row ends */}
-        </div>  {/* text-container ends */}
-      </section>
-        );
-  }
-}
+
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <input type="submit" value="Login" />
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};
+export default Testimonials;

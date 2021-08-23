@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%),url(../images/header-background.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -299,7 +299,7 @@ ul#nav li.current a { color: #F06000; }
    position: relative;
   	margin-bottom: 60px;
   	background: #ccc;
-  	height: 42px;
+   height:10px;
   	border-radius: 3px;
 }
 .bars li em {
@@ -311,18 +311,18 @@ ul#nav li.current a { color: #F06000; }
    position: relative;
 	top: -36px;
 }
+
 .bar-expand {
    position: absolute;
    left: 0;
    top: 0;
-
    margin: 0;
-   padding-right: 24px;
-  	background: #313131;
+   padding-right: 90%;
+  	background: #e0a72d;
    display: inline-block;
-  	height: 42px;
-   line-height: 42px;
-   border-radius: 3px 0 0 3px;
+  	height: 10px;
+   line-height: 2px;
+   border-radius: 5px;
 }
 
 .photoshop {
